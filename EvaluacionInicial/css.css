@@ -1,0 +1,17 @@
+body{
+    background-color: #ffffff;
+    width: 100%;
+}
+
+.contenido{
+    width: 90%;
+}
+
+#cajon{
+    display: flex;
+    align-items: center;
+}
+
+#carta{
+    width: 33%;
+}
