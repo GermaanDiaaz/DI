@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex Sencilla</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    
+    <style>
+        body {
+            background-color: #f4f6f8;
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+            padding-bottom: 40px;
+        }
+
+        .pokedex-header {
+            background: linear-gradient(135deg, #e63946, #b71c1c);
+            color: white;
+            padding: 2rem 1rem;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            margin-bottom: 2rem;
+        }
+
+        .pokemon-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 1.25rem;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            border: 1px solid #eef0f2;
+        }
+
+        .pokemon-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .pokemon-img-bg {
+            background: #f0f4f8;
+            border-radius: 12px;
+            padding: 1rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .pokemon-card img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+        }
+
+        .pokemon-id {
+            color: #8d99ae;
+            font-weight: 700;
+            font-size: 0.85rem;
+        }
+
+        .pokemon-name {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin: 0.3rem 0;
+            color: #2b2d42;
+        }
+
+        .badge-type {
+            font-size: 0.72rem;
+            padding: 0.25rem 0.6rem;
+            border-radius: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: white;
+            display: inline-block;
+            margin: 2px;
+        }
+
+        .type-plant { background-color: #78C850; }
+        .type-poison { background-color: #A040A0; }
+        .type-fire { background-color: #F08030; }
+        .type-water { background-color: #6890F0; }
+        .type-electric { background-color: #F8D030; color: #333; }
+        .type-ghost { background-color: #705898; }
+        .type-normal { background-color: #A8A878; }
+        .type-psychic { background-color: #F85888; }
+        .type-dragon { background-color: #7038F8; }
+        .type-flying { background-color: #A890F0; }
+        .type-fairy { background-color: #EE99AC; }
+    </style>
+</head>
+<body>
+
+    <header class="pokedex-header text-center">
+        <div class="container">
+            <h1 class="fw-bold m-0">Pokémon UI</h1>
+            <p class="m-0 mt-1 opacity-75">Lista de Pokémon</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 g-3">
+            
+            <!-- Bulbasaur -->
+            <div class="col">
+                <div class="pokemon-card">
+                    <div class="pokemon-img-bg">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" alt="Bulbasaur">
+                    </div>
+                    <span class="pokemon-id">#001</span>
+                    <h2 class="pokemon-name">Bulbasaur</h2>
+                    <div>
+                        <span class="badge-type type-plant">Planta</span>
+                        <span class="badge-type type-poison">Veneno</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charmander -->
+            <div class="col">
+                <div class="pokemon-card">
+                    <div class="pokemon-img-bg">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png" alt="Charmander">
+                    </div>
+                    <span class="pokemon-id">#004</span>
+                    <h2 class="pokemon-name">Charmander</h2>
+                    <div>
+                        <span class="badge-type type-fire">Fuego</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charizard -->
+            <div class="col">
+                <div class="pokemon-card">
+                    <div class="pokemon-img-bg">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png" alt="Charizard">
+                    </div>
+                    <span class="pokemon-id">#006</span>
+                    <h2 class="pokemon-name">Charizard</h2>
+                    <div>
+                        <span class="badge-type type-fire">Fuego</span>
+                        <span class="badge-type type-flying">Volador</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Squirtle -->
+            <div class="col">
+                <div class="pokemon-card">
+                    <div class="pokemon-img-bg">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png" alt="Squirtle">
+                    </div>
+                    <span class="pokemon-id">#007</span>
+                    <h2 class="pokemon-name">Squirtle</h2>
+                    <div>
+                        <span class="badge-type type-water">Agua</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pikachu -->
+            <div class="col">
+                <div class="pokemon-card">
+                    <div class="pokemon-img-bg">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png" alt="Pikachu">
+                    </div>
+                    <span class="pokemon-id">#025</span>
+                    <h2 class="pokemon-name">Pikachu</h2>
+                    <div>
+                        <span class="badge-type type-electric">Eléctrico</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jigglypuff -->
+            <div class="col">
+                <div class="pokemon-card">
+                    <div class="pokemon-img-bg">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/39.png" alt="Jigglypuff">
+                    </div>
+                    <span class="pokemon-id">#039</span>
+                    <h2 class="pokemon-name">Jigglypuff</h2>
+                    <div>
+                        <span class="badge-type type-normal">Normal</span>
+                        <span class="badge-type type-fairy">Hada</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gengar -->
+            <div class="col">
+                <div class="pokemon-card">
+                    <div class="pokemon-img-bg">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/94.png" alt="Gengar">
+                    </div>
+                    <span class="pokemon-id">#094</span>
+                    <h2 class="pokemon-name">Gengar</h2>
+                    <div>
+                        <span class="badge-type type-ghost">Fantasma</span>
+                        <span class="badge-type type-poison">Veneno</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Eevee -->
+            <div class="col">
+                <div class="pokemon-card">
+                    <div class="pokemon-img-bg">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/133.png" alt="Eevee">
+                    </div>
+                    <span class="pokemon-id">#133</span>
+                    <h2 class="pokemon-name">Eevee</h2>
+                    <div>
+                        <span class="badge-type type-normal">Normal</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dragonite -->
+            <div class="col">
+                <div class="pokemon-card">
+                    <div class="pokemon-img-bg">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/149.png" alt="Dragonite">
+                    </div>
+                    <span class="pokemon-id">#149</span>
+                    <h2 class="pokemon-name">Dragonite</h2>
+                    <div>
+                        <span class="badge-type type-dragon">Dragón</span>
+                        <span class="badge-type type-flying">Volador</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mewtwo -->
+            <div class="col">
+                <div class="pokemon-card">
+                    <div class="pokemon-img-bg">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/150.png" alt="Mewtwo">
+                    </div>
+                    <span class="pokemon-id">#150</span>
+                    <h2 class="pokemon-name">Mewtwo</h2>
+                    <div>
+                        <span class="badge-type type-psychic">Psíquico</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>
