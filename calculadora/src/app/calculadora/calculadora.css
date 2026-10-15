@@ -1,0 +1,18 @@
+.pantalla{
+    border: 1px solid black;
+    width: 30%;
+    margin-left: 20%;
+}
+
+h2{
+    text-align: right;
+    padding-right: 5%;
+}
+button{
+    width: 2%;
+    height: 3%;
+}
+.botones{
+    margin-left: 20%;
+    margin-top: 5%;
+}

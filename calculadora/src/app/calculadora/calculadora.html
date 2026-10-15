@@ -1,0 +1,34 @@
+<h1>Calculadora de 'El Ger'</h1>
+
+<div class="pantalla">
+    <h2>{{ valorPantalla }}</h2> 
+</div>
+
+<div class="botones">
+
+    <div style="margin-bottom: 5px;">
+        <button (click)="limpiar()" class="btn-clear">C</button>
+        <button (click)="establecerOperacion('+')">+</button>
+        <button (click)="establecerOperacion('-')">-</button>
+        <button (click)="calcular()" class="btn-igual">=</button>
+    </div>
+
+    <div style="display: flex;">
+        <button (click)="presionar('7')">7</button>
+        <button (click)="presionar('8')">8</button>
+        <button (click)="presionar('9')">9</button>
+    </div>
+    <div style="display: flex;">
+        <button (click)="presionar('4')">4</button>
+        <button (click)="presionar('5')">5</button>
+        <button (click)="presionar('6')">6</button>
+    </div>
+    <div style="display: flex;">
+        <button (click)="presionar('1')">1</button>
+        <button (click)="presionar('2')">2</button>
+        <button (click)="presionar('3')">3</button>
+    </div>
+
+
+    <button (click)="presionar('0')" class="btn-cero">0</button>
+</div>
